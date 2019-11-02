@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class KClosestPoints {
     public static int[][] kClosest(int[][] arr, int k) {
-        if (arr==null || arr.length<1) return null;
+        if (arr==null || arr[0].length<1) return null; // null
 
         int[][] res = new int[k][arr[0].length];
         int[] dist = new int[arr.length]; // store square result
@@ -51,7 +51,6 @@ public class KClosestPoints {
         }
         return Arrays.copyOfRange(points, 0, K);
     }
-
     private static int helper(int[][] A, int l, int r) {
         int[] pivot = A[l];
         while (l < r) {
@@ -63,7 +62,6 @@ public class KClosestPoints {
         A[l] = pivot;
         return l;
     }
-
     private static int compare(int[] p1, int[] p2) {
         return p1[0] * p1[0] + p1[1] * p1[1] - p2[0] * p2[0] - p2[1] * p2[1];
     }
@@ -72,6 +70,7 @@ public class KClosestPoints {
 
     public static void main(String[] args) {
         int[][] arr = {{1,2},{2,3},{1,3}};
+
         int k = 2;
         int[][] res= kClosest(arr, k);
         int[][] res2 = kClosestDv(arr, k);

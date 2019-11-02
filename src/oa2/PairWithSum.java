@@ -46,7 +46,7 @@ public class PairWithSum {
         }
 
         List<Integer> num = Arrays.asList(1,2,3,4,5,4,3);
-        int target = 4;
+        int target = 3;
         System.out.println(findPair(num, target));
 
 
