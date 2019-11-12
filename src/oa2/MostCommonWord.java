@@ -2,6 +2,8 @@ package oa2;
 
 import java.util.*;
 
+// mime
+
 public class MostCommonWord {
     public static List<String> mostCommonWord(String paragraph, List<String> banned) {
         paragraph += ".";
@@ -45,7 +47,7 @@ public class MostCommonWord {
     }
 
     public static void main(String[] args) {
-        String s = "Bob hit a ball, the hit BALL flew far after it was hit flew like";
+        String s = "flw fls";
         List<String> banned = new ArrayList<>();
         banned.add("hit");
         banned.add("LIKE");

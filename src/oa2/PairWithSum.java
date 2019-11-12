@@ -8,6 +8,7 @@ public class PairWithSum {
         //target -= 30;
         Map<Integer, Integer> map = new HashMap<>();
         List<Integer> res = new ArrayList<>();
+        //boolean flag = false;
         int largest = 0;
         for (int i=0; i<nums.size(); i++) {
             int complement = target-nums.get(i);
@@ -15,13 +16,14 @@ public class PairWithSum {
                 res.add(map.get(complement));
                 res.add(i);
                 largest = Math.max(nums.get(i), complement);
+                //flag = true;
             }
             map.put(nums.get(i), i);
         }
+        //if (flag== false) return null;
         return res;
 
     }
-
 
     public static int[] twoSum (int[] arr, int target) {
         int[] res = new int[2];
@@ -38,15 +40,16 @@ public class PairWithSum {
         }
         return res;
     }
+
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,6,7,8,9};
-        int[] res = twoSum(arr, 8);
+        int[] res = twoSum(arr, 4);
         for (int e: res) {
             System.out.println(e);
         }
 
         List<Integer> num = Arrays.asList(1,2,3,4,5,4,3);
-        int target = 3;
+        int target = 2;
         System.out.println(findPair(num, target));
 
 

@@ -2,6 +2,8 @@ package oa2;
 
 import java.util.Arrays;
 
+// mine
+
 public class LongestPalindromic {
     // me: expand around center
     public static String palindromic (String s) {
