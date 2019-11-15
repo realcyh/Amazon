@@ -14,7 +14,7 @@ public class Medianof2SortedArray {
                         res[i] = nums1[j];
                         j++;
                     } else {
-                        res[i ]= nums1[k];
+                        res[i ]= nums2[k];
                         k++;
                     }
                 } else {
@@ -27,13 +27,14 @@ public class Medianof2SortedArray {
             }
         }
 
-        if (l%2 == 0) return (double)(res[l/2] + res[l/2-1])/2;
+        if (l%2 == 0) return (double)(res[l/2] + res[l/2-1])/2.0;
         else return res[l/2];
     }
 
     public static void main(String[] args) {
-        int[] nums1 = {1,3,5,7};
-        int[] nums2 = {2,4};
-        System.out.println( findMedianSortedArrays(nums1, nums2) );
+        int[] nums1 = {1,3,5,7,9};
+        int[] nums2 = {2,4,6};
+        double res = findMedianSortedArrays(nums1, nums2);
+        System.out.println( res );
     }
 }
