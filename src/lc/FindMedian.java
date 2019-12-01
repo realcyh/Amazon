@@ -1,5 +1,7 @@
 package lc;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.PriorityQueue;
 
 public class FindMedian {
@@ -29,9 +31,12 @@ public class FindMedian {
         f.addNum(1);
         f.addNum(2);
         double res = f.findMedian();
-        System.out.println(res);
-        f.addNum(3);
-        res = f.findMedian();
-        System.out.println(res);
+
+        List<Integer> a = new LinkedList<>();
+        a.add(3);
+        a.add(4);
+        List<Integer> b = a;
+        b.add(5);
+        System.out.println(a);
     }
 }
