@@ -35,5 +35,7 @@ public class DecodeString {
         DecodeString d = new DecodeString();
         String a = d.decodeString(s);
         System.out.println(a);
+        int[][] b = new int[0][0];
+
     }
 }
