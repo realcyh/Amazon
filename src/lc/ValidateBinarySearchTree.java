@@ -19,6 +19,7 @@ public class ValidateBinarySearchTree {
                 return false;
             }
         }
+
         return true;
     }
 
