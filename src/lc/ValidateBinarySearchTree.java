@@ -38,4 +38,31 @@ public class ValidateBinarySearchTree {
         }
         return l;
     }
+
+    public static void main(String[] args) {
+        ValidateBinarySearchTree v = new ValidateBinarySearchTree();
+        TreeNode t = v.new TreeNode(2);
+        System.out.println(t.val);
+        tree tt = new tree(3);
+        System.out.println(tt.val);
+        tree tre = new tree(4);
+        System.out.println(tre.val);
+        tree.treeinner ttt = tre.new treeinner(5);
+        System.out.println(ttt.val);
+    }
+}
+
+class tree {
+    int val;
+    tree next;
+    tree(int x) {
+        val = x;
+    }
+
+    public class treeinner {
+        int val;
+        treeinner(int x) {
+            val = x;
+        }
+    }
 }
