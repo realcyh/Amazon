@@ -22,11 +22,23 @@ public class FindSubstring {
         return index;
     }
 
+    public int findIndex2(String s1, String s2) {
+        int index = -1;
+        for (int i=0; i<=s2.length() - s1.length(); i++) {
+            if (s2.substring(i, i+s1.length()).equals(s1)) {
+                index = i;
+                break;
+            }
+        }
+        return index;
+    }
+
     public static void main(String[] args) {
-        String s1 = "abcd";
-        String s2 = "aabcddefgabcd";
+        String s1 = "ab";
+        String s2 = "adcab";
         FindSubstring f = new FindSubstring();
         int res = f.findIndex(s1, s2);
-        System.out.println(res);
+        int res2 = f.findIndex2(s1, s2);
+        System.out.println(res+" "+res2);
     }
 }
