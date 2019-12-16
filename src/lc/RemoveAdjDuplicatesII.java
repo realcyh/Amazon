@@ -49,5 +49,17 @@ public class RemoveAdjDuplicatesII {
         RemoveAdjDuplicatesII r = new RemoveAdjDuplicatesII();
         String res = r.removeDuplicates(s, k);
         System.out.println(res);
+
+        String s1 = "abcc";
+        String s2 = "bvff";
+
+        Map<Character, Integer> m1 = new HashMap<>();
+        Map<Character, Integer> m2 = new HashMap<>();
+
+        for(int i = 128; i < s1.length()+128; i++) {
+            if(m1.put(s1.charAt(i-128), i) == m2.put(s2.charAt(i-128), i)) {
+                System.out.println( m1.put(s1.charAt(i-128), i) == m2.put(s2.charAt(i-128), i));
+            }
+        }
     }
 }
