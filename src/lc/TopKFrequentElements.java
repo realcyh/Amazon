@@ -21,12 +21,24 @@ public class TopKFrequentElements {
             res.add(heap.poll());
         }
 
+
+
+        // top k largest elements
+        Set<Integer> set = new HashSet<>();
+        for (int n: nums) {
+            set.add(n);
+        }
+        List<Integer> list = new ArrayList<>(set);
+        Collections.sort(list);
+        System.out.println(list);
+
+
         return res;
     }
 
     public static void main(String[] args) {
         TopKFrequentElements t = new TopKFrequentElements();
-        int[] nums = {1,2};
+        int[] nums = {1,2,5,6,9,1,2,2};
         int k = 1;
         List<Integer> res = t.topKFrequent(nums, k);
         System.out.println(res);

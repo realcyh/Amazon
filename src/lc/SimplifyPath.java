@@ -20,4 +20,8 @@ public class SimplifyPath {
         if (sb.length() == 0) return "/";
         return sb.toString();
     }
+
+    public static void main(String[] args) {
+        List<Integer> list = new LinkedList<>();
+    }
 }
