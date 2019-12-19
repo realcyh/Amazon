@@ -12,7 +12,7 @@ public class LevelOrderTraversal {
         }
     }
 
-    public List<List<Integer>> levelOrderBottom(TreeNode root) {
+    public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
         if (root == null) return res;
 
@@ -27,7 +27,7 @@ public class LevelOrderTraversal {
                 if (node.left != null) q.add(node.left);
                 if (node.right != null) q.add(node.right);
             }
-            res.add(0, list);
+            res.add(list);
         }
         return res;
     }
